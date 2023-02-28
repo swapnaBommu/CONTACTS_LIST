@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <!--place our css file below of all the other files to
+        over ride the styles-->
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+        <h1 id="heading">
+            <i class="fa fa-address-book"></i>
+            My Contacts List
+        </h1>
+        <div>
+            <ul>
+                <% for(let i of contact_list){ %>
+                    <li> 
+                        <!-- <div> -->
+                            <p id="name">
+                                <i class="fa fa-id-badge" id="icon"></i>
+                                <%= i.name %>
+                            </p>
+                            <p id="phone"><%= i.phone %></p>
+                        <!-- </div> -->
+                        <div id="close">
+                            <a href="/delete-contact/?id=<%= i.id %>">
+                                <i class="fa fa-window-close"></i>
+                            </a>
+                        </div>
+                    </li>
+                      
+                <%}%>
+            </ul>
+        </div>
+
+        <div id="form">
+            <form action="/create-contact" method="POST">
+                <input type="text" name="name" placeholder="Enter name" required>
+                <input type="number" name="phone" placeholder="Enter Phone Number" required>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+        <script type="text/javascript" src="/JS/home.js"></script>
+    </body>
+</html>

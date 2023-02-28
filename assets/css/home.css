@@ -1,0 +1,93 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+}
+#heading{
+    text-align: center;
+    color: brown;
+    margin-top: 15px;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+ul li{
+    list-style: none;
+}
+li{
+    border: none;
+    min-width: 400px;
+    min-height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #a5d6a7;
+    margin: 1px;
+    border-radius: 5px;
+}
+li:hover{
+    background-color: blueviolet;
+    border-color:blueviolet;
+    box-shadow: 0px 0px 10px 2px black;
+}
+#icon{
+    margin: 5px;
+    color: black;
+}
+#name{
+    color: black;
+    padding: 5px;;
+}
+#phone{
+    color: black;
+    padding: 5px;
+}
+#form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#form form{
+    margin-left: 30px;
+}
+#form form input{
+    border: none;
+    margin:2px;
+    width: 150px;
+    border-bottom:2px solid black;
+    padding: 5px;
+}
+
+#form form input:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid yellowgreen;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+button{
+    padding: 7px;
+    width: 83px;
+    border: 1px solid #d008b9;
+    background-color: #d008b9;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+button:hover{
+    box-shadow: 0px 0px 10px 2px #6c1161;
+}
+#close{
+    margin-right: 5px;
+}
+#close a{
+    color: white;
+    background-color: red;
+    text-decoration: none;
+}
